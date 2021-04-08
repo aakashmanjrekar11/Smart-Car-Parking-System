@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -15,6 +16,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final databaseRef = FirebaseDatabase.instance.reference();
+  String slot1 = "";
+  String slot2 = "";
+  String slot3 = "";
+  String slot4 = "";
+  void printFirebase(){
+  databaseRef.once().then((DataSnapshot snapshot) {
+    slot1 = "Slot 1 Time(s): " + snapshot.value['Slot1 Elapsed Time(s): '].toString();
+    slot2 = "Slot 2 Time(s): " + snapshot.value['Slot2 Elapsed Time(s): '].toString();
+    slot3 = "Slot 3 Time(s): " + snapshot.value['Slot3 Elapsed Time(s): '].toString();
+    slot4 = "Slot 4 Time(s): " + snapshot.value['Slot4 Elapsed Time(s): '].toString();
+    print(slot1+slot2+slot3+slot4);
+  });
+}
+@override
+  void initState() {
+    printFirebase();
+    // TODO: implement initState
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -68,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     cardChild: IconContent(
                       iconName: FontAwesomeIcons.solidPaperPlane,
                       iconColor: Colors.white,
-                      fieldName: '   Complaint\n Registration',
+                      fieldName: slot1,
                     ),
                   ),
                 ),
@@ -81,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     cardChild: IconContent(
                       iconName: FontAwesomeIcons.solidAddressBook,
                       iconColor: Colors.white,
-                      fieldName: '           My\nComplaints',
+                      fieldName: slot2,
                     ),
                   ),
                 ),
@@ -99,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     cardChild: IconContent(
                       iconName: FlutterIcons.sheriff_badge_fou,
                       iconColor: Colors.white,
-                      fieldName: '     Mumbai Police\nStations Contacts',
+                      fieldName: slot3,
                     ),
                   ),
                 ),
@@ -113,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     cardChild: IconContent(
                       iconName: FontAwesomeIcons.userShield,
                       iconColor: Colors.white,
-                      fieldName: 'Safety\n  Tips',
+                      fieldName: slot4,
                     ),
                   ),
                 ),

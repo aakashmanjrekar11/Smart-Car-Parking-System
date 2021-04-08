@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "847962197509",
+    "firebase_url": "https://smart-car-parking-7df03-default-rtdb.firebaseio.com",
+    "project_id": "smart-car-parking-7df03",
+    "storage_bucket": "smart-car-parking-7df03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847962197509:android:3c6d7b0f0f9b615070d66c",
+        "android_client_info": {
+          "package_name": "com.example.smart_car_parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847962197509-mk7ralgs0359kn6o9gfg7j3g6m4mddkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk5MYPUc0Lzfe5qXGaNzmcRT6hYi_Q7wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847962197509-mk7ralgs0359kn6o9gfg7j3g6m4mddkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
