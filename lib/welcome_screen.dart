@@ -41,7 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Color(0xFF8185E2),
+          backgroundColor: Colors.lightBlueAccent,
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -51,17 +51,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   duration: Duration(milliseconds: 900),
                   glowColor: Colors.white24,
                   repeat: true,
-                  repeatPauseDuration: Duration(milliseconds: 100),
-                  startDelay: Duration(milliseconds: 100),
+                  repeatPauseDuration: Duration(milliseconds: 300),
+                  startDelay: Duration(milliseconds: 200),
                   child: CircularProfileAvatar(
                     null,
                     child: Image(
                       image: AssetImage(
-                        'images/IndianPoliceOfficer_whiteBG.png',
+                        'images/car.jpg',
                       ),
                     ),
                     borderColor: Colors.grey,
-                    borderWidth: 2,
                     elevation: 10,
                     radius: 90,
                   ),
@@ -90,7 +89,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
                 DelayedAnimation(
                   child: Text(
-                    "SecuroServe",
+                    "Smart Car Parking",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 37.0,
@@ -100,20 +99,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
                 SizedBox(
                   height: 30.0,
-                ),
-                DelayedAnimation(
-                  child: Text(
-                    "Your New Personal",
-                    style: TextStyle(fontSize: 20.0, color: color),
-                  ),
-                  delay: delayedAmount + 3000,
-                ),
-                DelayedAnimation(
-                  child: Text(
-                    "Crime Reporting & AIO Safety Companion",
-                    style: TextStyle(fontSize: 20.0, color: color),
-                  ),
-                  delay: delayedAmount + 3000,
                 ),
                 SizedBox(
                   height: 100.0,
@@ -179,7 +164,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               style: TextStyle(
                 fontSize: 23.0,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF8185E2),
+                color: Colors.lightBlueAccent
               ),
             ),
           ),
