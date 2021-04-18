@@ -4,12 +4,15 @@ import 'package:flutter/material.dart';
 class IconContent extends StatelessWidget {
   final IconData iconName;
   final String fieldName;
+  final String subFieldName;
   final Color iconColor;
 
   IconContent(
       {@required this.iconName,
       @required this.iconColor,
-      @required this.fieldName});
+      @required this.fieldName,
+      @required this.subFieldName
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +34,13 @@ class IconContent extends StatelessWidget {
               fontWeight: FontWeight.w600,
               color: Colors.white,
             ),
+          ),
+          Text(
+            subFieldName,
+            style: TextStyle(
+              fontSize: 15.0,
+              color: Colors.white,
+          ),
           ),
         ],
       ),

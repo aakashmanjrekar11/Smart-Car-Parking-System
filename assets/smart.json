@@ -1,0 +1,90 @@
+{
+  "Slot 1" : {
+    "Slot1 Elapsed Time(s): " : {
+      "-MYO7CziGJ_q5E6Of7er" : 7,
+      "-MYO7FKT2Ye99cqvxTPh" : 9,
+      "-MYO9I1Ei2qA8i0nq9jW" : 6,
+      "-MYO9OD3nLmcXLXcH_u2" : 1,
+      "-MYOBlPIMoXixCmb4Lxx" : 3
+    },
+    "Timestamp(Date): " : {
+      "-MYO7DMT3phkt3YWC6fv" : "2021/04/16",
+      "-MYO7FZ_oy9RIZASnF-C" : "2021/04/11",
+      "-MYO9ILMNxzkFpXL4CyT" : "2021-04-12",
+      "-MYO9OY64-m07rs64Lv-" : "2021-04-15",
+      "-MYOBl_1U9I2n4VTWYqN" : "2021-04-13"
+    },
+    "Timestamp(Day): " : {
+      "-MYO7D8Pp4Wy2fOn_T5H" : "Friday",
+      "-MYO7FQ2jVIaSLIvSqB9" : "Friday",
+      "-MYO9IC0LCNRjXpmKC78" : "Friday",
+      "-MYO9ON9ZCb9RsEZUAYp" : "Friday",
+      "-MYOBlUZ8wlqjwpULUTG" : "Friday"
+    },
+    "Timestamp(Time): " : {
+      "-MYO7DWTkpzfjq5Gg6eR" : "10:51",
+      "-MYO7Frxbu3eI-pM5_vF" : "10:52",
+      "-MYO9IVOXphqWQDtS535" : "11:0",
+      "-MYOBlibIEUP771L5yU2" : "11:11",
+      "-MYOBlibIEUP771L5yt2" : "11:11"
+    }
+  },
+  "Slot 2" : {
+    "Slot2 Elapsed Time(s): " : {
+      "-MYL6xZOF5GezSRIcdSG" : 7,
+      "-MYL6zve17HawPye7aoe" : 2,
+      "-MYO9Kc0BHGRfU89f0E5" : 0
+    },
+    "Timestamp(Date): " : {
+      "-MYO9KqNKqjJfXOsaSH_" : "2021-04-16",
+      "-MYO9KqNKqjJfXsaSH_" : "2021-04-16",
+      "-MYO9KqNKqjJfXsOsaSH_" : "2021-04-16"
+    },
+    "Timestamp(Day): " : {
+      "-MYL6xhnKqzSrGr3bFBe" : "Thursday",
+      "-MYL7-O2IxKMPmvIesFQ" : "Thursday",
+      "-MYO9Ki_zwHSy5DsfVnk" : "Friday"
+    },
+    "Timestamp(Time): " : {
+      "-MYL6xoSEbTof9DvNUYh" : "2051",
+      "-MYL7-URW94Teu-0fMJv" : "2052",
+      "-MYO9L-4MSIGqsN_3g7c" : "111"
+    }
+  },
+  "Slot 3" : {
+    "Slot3 Elapsed Time(s): " : {
+      "-MYL6vavPt-pSzJJjaQP" : 4,
+      "-MYO9EGPLTtf7vMqjh58" : 0
+    },
+    "Timestamp(Date): " : {
+      "-MYO9EWWbyRMRa2I737I" : "2021-04-16",
+      "-MYO9EWWbyRMRa2I73I" : "2021-04-16"
+    },
+    "Timestamp(Day): " : {
+      "-MYL6vlY7n7y7pcHBC7F" : "Thursday",
+      "-MYO9EN7cNNVZw_CXrOQ" : "Friday"
+    },
+    "Timestamp(Time): " : {
+      "-MYL6vucXuHHuP_4KDqy" : "2051",
+      "-MYO9Ef2NPY3dE2V0avg" : "110"
+    }
+  },
+  "Slot 4" : {
+    "Slot4 Elapsed Time(s): " : {
+      "-MYL6qQgPA95Bhg2mpf4" : 5,
+      "-MYO95kW_jC5QmegxZcZ" : 0
+    },
+    "Timestamp(Date): " : {
+      "-MYO96J1WWp6HDM3hvMq" : "2021-04-16",
+      "-MYO96J1WWp6HDM3hMq" : "2021-04-16"
+    },
+    "Timestamp(Day): " : {
+      "-MYL6qXjFm8C97VPeHu9" : "Thursday",
+      "-MYO95zr5uZ9-KpINAl6" : "Friday"
+    },
+    "Timestamp(Time): " : {
+      "-MYL6qgF6pIkkaPzb__C" : "2051",
+      "-MYO96SQ5t53ly_kDy9W" : "110"
+    }
+  }
+}
