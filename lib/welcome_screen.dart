@@ -1,13 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'utils/delayed_animation.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
-
-// void main() {
-//   SystemChrome.setEnabledSystemUIOverlays([]);
-//   runApp(WelcomeScreen());
-// }
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -64,15 +58,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     elevation: 10,
                     radius: 90,
                   ),
-                  // child: Material(
-                  //     elevation: 8.0,
-                  //     shape: CircleBorder(),
-                  //     child: CircleAvatar(
-                  //       backgroundColor: Colors.grey[100],
-                  //       backgroundImage: AssetImage(
-                  //           'images/IndianPoliceOfficer_whiteBG.png'),
-                  //       radius: 70.0,
-                  //     )),
                 ),
                 DelayedAnimation(
                   child: Text(
@@ -117,32 +102,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 SizedBox(
                   height: 50.0,
                 ),
-                // DelayedAnimation(
-                //   child: Text(
-                //     "Register New Account",
-                //     style: TextStyle(
-                //         fontSize: 25.0,
-                //         fontWeight: FontWeight.bold,
-                //         color: color),
-                //   ),
-                //   delay: delayedAmount + 5000,
-                // ),
               ],
             ),
           )
-          //  Column(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: <Widget>[
-          //     Text('Tap on the Below Button',style: TextStyle(color: Colors.grey[400],fontSize: 20.0),),
-          //     SizedBox(
-          //       height: 20.0,
-          //     ),
-          //      Center(
-
-          //   ),
-          //   ],
-
-          // ),
           ),
     );
   }

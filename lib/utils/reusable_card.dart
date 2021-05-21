@@ -14,12 +14,12 @@ class ReusableCard extends StatelessWidget {
     this.gradient1,
     this.gradient2,
   });
-
+  
   @override
   Widget build(BuildContext context) {
     List<Color> _colors = [gradient1, gradient2];
     List<double> _stops = [0.0, 0.7];
-
+   
     return GestureDetector(
       onTap: onPress,
       child: Container(
@@ -46,4 +46,20 @@ class ReusableCard extends StatelessWidget {
       ),
     );
   }
+}
+
+LinearGradient gradient(){
+ final List<Color> color = <Color>[];
+    color.add(Colors.blue[50]);
+    color.add(Colors.blue[200]);
+    color.add(Colors.blue);
+
+    final List<double> stops = <double>[];
+    stops.add(0.0);
+    stops.add(0.5);
+    stops.add(1.0);
+
+    final LinearGradient gradientColors =
+        LinearGradient(colors: color, stops: stops,begin: Alignment.bottomCenter,end: Alignment.topCenter);
+    return gradientColors;
 }

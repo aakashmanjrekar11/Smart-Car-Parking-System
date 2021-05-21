@@ -1,90 +1,153 @@
 {
-  "Slot 1" : {
-    "Slot1 Elapsed Time(s): " : {
-      "-MYO7CziGJ_q5E6Of7er" : 7,
-      "-MYO7FKT2Ye99cqvxTPh" : 9,
-      "-MYO9I1Ei2qA8i0nq9jW" : 6,
-      "-MYO9OD3nLmcXLXcH_u2" : 1,
-      "-MYOBlPIMoXixCmb4Lxx" : 3
+  "Slot 1": {
+    "Slot1 Elapsed Time(s): ": {
+      "-MYO7CziGJ_q5E6Of7er": 7,
+      "-MYO7FKT2Ye99cqvxTPh": 9,
+      "-MYO9I1Ei2qA8i0nq9jW": 6,
+      "-MYO9OD3nLmcXLXcH_u2": 1,
+      "-MYOBlPIMoXixCmb4Lxx": 3,
+      "-MYO7CziGJ_q5E6Of7ea": 8,
+      "-MYOBlPIMoXixCmb4Lxq": 12
     },
-    "Timestamp(Date): " : {
-      "-MYO7DMT3phkt3YWC6fv" : "2021/04/16",
-      "-MYO7FZ_oy9RIZASnF-C" : "2021/04/11",
-      "-MYO9ILMNxzkFpXL4CyT" : "2021-04-12",
-      "-MYO9OY64-m07rs64Lv-" : "2021-04-15",
-      "-MYOBl_1U9I2n4VTWYqN" : "2021-04-13"
+    "Timestamp(Date): ": {
+      "-MYO7DMT3phkt3YWC6fv": "2021-04-16",
+      "-MYO7FZ_oy9RIZASnF-C": "2021-04-11",
+      "-MYO9ILMNxzkFpXL4CyT": "2021-04-12",
+      "-MYO9OY64-m07rs64Lv-": "2021-04-15",
+      "-MYOBl_1U9I2n4VTWYqN": "2021-04-13",
+      "-MYOBl_1U9I2n4VTYqK": "2021-03-4",
+      "-MYOBl_1U9I2n4VTWYqK": "2021-03-4"
     },
-    "Timestamp(Day): " : {
-      "-MYO7D8Pp4Wy2fOn_T5H" : "Friday",
-      "-MYO7FQ2jVIaSLIvSqB9" : "Friday",
-      "-MYO9IC0LCNRjXpmKC78" : "Friday",
-      "-MYO9ON9ZCb9RsEZUAYp" : "Friday",
-      "-MYOBlUZ8wlqjwpULUTG" : "Friday"
+    "Timestamp(Day): ": {
+      "-MYO7D8Pp4Wy2fOn_T5wet": "Tuesday",
+      "-MYO7FQ2jVIaSLIvSqB945": "Tuesday",
+      "-MYO9IC0LCNRjXpmKC7g": "Tuesday",
+      "-MYO9ON9ZCb9RsEZUAYgh": "Tuesday",
+      "-MYOBlUZ8wlqjwpULUThj": "Tuesday",
+      "-MYO7D8Pp4Wy2fOn_T5gh": "Wednesday",
+      "-MYOBlUZ8wlqjwpULUTg3": "Monday"
     },
-    "Timestamp(Time): " : {
-      "-MYO7DWTkpzfjq5Gg6eR" : "10:51",
-      "-MYO7Frxbu3eI-pM5_vF" : "10:52",
-      "-MYO9IVOXphqWQDtS535" : "11:0",
-      "-MYOBlibIEUP771L5yU2" : "11:11",
-      "-MYOBlibIEUP771L5yt2" : "11:11"
+    "Timestamp(Time): ": {
+      "-MYO7DWTkpzfjq5Gg6erth": "13",
+      "-MYO7Frxbu3eI-pM5_vt": "12",
+      "-MYO9IVOXphqWQDtS53ry": "11",
+      "-MYOBlibIEUP771L5yUg": "11",
+      "-MYOBlibIEUP771L5ytyt": "11",
+      "-MYO7DWTkpzfjq5Gg6eRre": "12",
+      "-MYOBli3IEUP771L5yt2": "2"
     }
   },
-  "Slot 2" : {
-    "Slot2 Elapsed Time(s): " : {
-      "-MYL6xZOF5GezSRIcdSG" : 7,
-      "-MYL6zve17HawPye7aoe" : 2,
-      "-MYO9Kc0BHGRfU89f0E5" : 0
+  "Slot 2": {
+    "Slot2 Elapsed Time(s): ": {
+      "-MYL6sxZOF5GezSRIcdSG": 7,
+      "-MYL6zsve17HawPye7aoe": 2,
+      "-MYO9Kcs0BHGRfU89f0E5": 5,
+      "-MYLq6xZOF5GezSRIcdSG": 6,
+      "-MYL6qzve17HawPye7aoe": 1,
+      "-MYO9Kqc0BHGRfU89f0E5": 4,
+      "-MYL6mzvme17HawPye7aoe": 17
     },
-    "Timestamp(Date): " : {
-      "-MYO9KqNKqjJfXOsaSH_" : "2021-04-16",
-      "-MYO9KqNKqjJfXsaSH_" : "2021-04-16",
-      "-MYO9KqNKqjJfXsOsaSH_" : "2021-04-16"
+    "Timestamp(Date): ": {
+      "-MYO9ILMNxzkkFpXL4CyT": "2021-04-12",
+      "-MYO9OY64k-m07rs64Lv-": "2021-04-15",
+      "-MYOBl_1U9kI2n4VTWYqN": "2021-04-13",
+      "-MYO9ILMNxzkkkFpXL4CyT": "2021-03-11",
+      "-MYO9OY64-m07krs64Lv-": "2021-03-14",
+      "-MYOBl_1U9I2n4kVTWYqN": "2021-03-12",
+      "-1MYO9OY64-m07rs64Lv-": "2021-03-14"
     },
-    "Timestamp(Day): " : {
-      "-MYL6xhnKqzSrGr3bFBe" : "Thursday",
-      "-MYL7-O2IxKMPmvIesFQ" : "Thursday",
-      "-MYO9Ki_zwHSy5DsfVnk" : "Friday"
+    "Timestamp(Day): ": {
+      "-MYL-O2IxKMPmvIesFQ": "Monday",
+      "-MY9Ki_zwHSy5DsfVnk": "Tuesday",
+      "-MY6xnKqzSrGr3bFBe": "Friday",
+      "-ML7-O2IxKMPmvIesFQ": "Friday",
+      "-MYKi_zwHSy5DsfVnk": "Monday",
+      "-MY6xhnKqzSrGr3bFBe": "Thursday",
+      "-MYO9Ki_zwHSy5DsfVnk": "Monday"
     },
-    "Timestamp(Time): " : {
-      "-MYL6xoSEbTof9DvNUYh" : "2051",
-      "-MYL7-URW94Teu-0fMJv" : "2052",
-      "-MYO9L-4MSIGqsN_3g7c" : "111"
+    "Timestamp(Time): ": {
+      "-MYL6xoSEbTof9DvNUY": "13",
+      "-MYL7-URW9Teu-0fMJv": "12",
+      "-MYO9L-4MSIGqsN_3g7": "11",
+      "-MYL6xoSEbTof9DvNh": "12",
+      "-MYL7-URW94Teu-0MJv": "11",
+      "-MYO9L-4MSIGqsN3g7c": "10",
+      "-MYL7-URW94Teu-0fMJv": "15"
     }
   },
-  "Slot 3" : {
-    "Slot3 Elapsed Time(s): " : {
-      "-MYL6vavPt-pSzJJjaQP" : 4,
-      "-MYO9EGPLTtf7vMqjh58" : 0
+  "Slot 3": {
+    "Slot3 Elapsed Time(s): ": {
+      "-MYL6vavPt-pSzJJjaQ": 4,
+      "-MYO9EGPLTtf7vMqjh8": 6,
+      "-MYL6vavPt-pSzJJjQP": 3,
+      "-MYO9EGPLTtf7vMqh58": 5,
+      "-MYL6vavPt-pSzJjaQP": 2,
+      "-MYO9EGPLTtf7vqjh58": 4,
+      "-MYO9EGdPLTtf7vMqjh58": 14
     },
-    "Timestamp(Date): " : {
-      "-MYO9EWWbyRMRa2I737I" : "2021-04-16",
-      "-MYO9EWWbyRMRa2I73I" : "2021-04-16"
+    "Timestamp(Date): ": {
+      "-MYO9ILMNdzkFpXL4CyT": "2021-04-12",
+      "-MYOBl_1UfI2n4VTWYqN": "2021-04-13",
+      "-MYOBl_1U9kI2n4VTWYqN": "2021-04-13",
+      "-MYO9ILMNxzkkkFpXL4CyT": "2021-03-11",
+      "-MYO9OY64-m07krs64Lv-": "2021-03-14",
+      "-MYOBl_1U9I2n4kVTWYqN": "2021-03-12",
+      "-MYOBl_1U9I12n4VTWYqN": "2021-03-20"
     },
-    "Timestamp(Day): " : {
-      "-MYL6vlY7n7y7pcHBC7F" : "Thursday",
-      "-MYO9EN7cNNVZw_CXrOQ" : "Friday"
+    "Timestamp(Day): ": {
+      "-MYL6vlY7n7y7pcHBC7": "Thursday",
+      "-MYO9EN7cNNVZw_CXrQ": "Friday",
+      "-MYL6vlY7n7y7pcH7F": "Wednesday",
+      "-MYO9EN7cNNVZw_XrOQ": "Thursday",
+      "-MYL6vlY7n7y7pHBC7F": "Tuesday",
+      "-MYO9EN7cNNVZCXrOQ": "Wednesday",
+      "-MYL6vlY71n7y7pcHBC7F": "Friday"
     },
-    "Timestamp(Time): " : {
-      "-MYL6vucXuHHuP_4KDqy" : "2051",
-      "-MYO9Ef2NPY3dE2V0avg" : "110"
+    "Timestamp(Time): ": {
+      "-MYL6vucXuHHuP_4KDq": "15",
+      "-MYO9Ef2NPY3dE2V0ag": "11",
+      "-MYL6vucXuHHuP_4Kqy": "14",
+      "-MYO9Ef2NPY3dE2Vavg": "10",
+      "-MYL6vucXuHHuP_KDqy": "13",
+      "-MYO9Ef2NPY3dEV0avg": "9",
+      "-MYO9Ef2NPY3dE2V0avg": "12"
     }
   },
-  "Slot 4" : {
-    "Slot4 Elapsed Time(s): " : {
-      "-MYL6qQgPA95Bhg2mpf4" : 5,
-      "-MYO95kW_jC5QmegxZcZ" : 0
+  "Slot 4": {
+    "Slot4 Elapsed Time(s): ": {
+      "-MYL6qQgPA95Bhg2mpf": 5,
+      "-MYO95kW_jC5QmegxZZ": 1,
+      "-MYL6qQgPA95Bhg2f4": 4,
+      "-MYO95kW_jC5QmexZcZ": 2,
+      "-MYL6qQgPA95B2mpf4": 3,
+      "-MYL6qQgPA95B2mpf": 5,
+      "-MYO95kW_jC5megxZcZ": 4
     },
-    "Timestamp(Date): " : {
-      "-MYO96J1WWp6HDM3hvMq" : "2021-04-16",
-      "-MYO96J1WWp6HDM3hMq" : "2021-04-16"
+    "Timestamp(Date): ": {
+      "-MYO9ILMNxzkFpXL4Cy": "2021-04-12",
+      "-MYO9OY64-m07rs64L-": "2021-04-15",
+      "-MYO9ILMNxzkFpXLyT": "2021-03-11",
+      "-MYO9Y64m07rs64Lv-": "2021-03-14",
+      "-MYO9ILMNxzkF4CyT": "2021-03-10",
+      "-MYOOY64-m0rs64Lv-": "2021-03-13",
+      "-MYO9OY4-m07rs64Lv-": "2021-03-29"
     },
-    "Timestamp(Day): " : {
-      "-MYL6qXjFm8C97VPeHu9" : "Thursday",
-      "-MYO95zr5uZ9-KpINAl6" : "Friday"
+    "Timestamp(Day): ": {
+      "-MYL6qXjFm8C97VPeHu": "Thursday",
+      "-MYO95zr5uZ9-KpINA6": "Friday",
+      "-MYL6qXjFm8C97VPeu9": "Wednesday",
+      "-MYO95zr5uZ9-KpIAl6": "Thursday",
+      "-MYL6qXjFm8C97VeHu9": "Tuesday",
+      "-MYO95zr5uZ9-KINAl6": "Wednesday",
+      "-MYO95zr5uZ9-KpINAl6": "Monday"
     },
-    "Timestamp(Time): " : {
-      "-MYL6qgF6pIkkaPzb__C" : "2051",
-      "-MYO96SQ5t53ly_kDy9W" : "110"
+    "Timestamp(Time): ": {
+      "-MYL6qgF6pIkkaPzb__": "21",
+      "-MYO96SQ5t53ly_kDyW": "19",
+      "-YL6qgF6pIkkaPzb__C": "20",
+      "-MYO96SQ5t53ly_kD9W": "18",
+      "-MYL6qgF6pIkkaPz__C": "19",
+      "-MYO96SQ5t53ly_kDy9W": "13"
     }
   }
 }

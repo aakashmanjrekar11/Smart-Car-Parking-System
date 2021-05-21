@@ -8,74 +8,50 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'utils/reusable_card.dart';
 import 'utils/icon_content.dart';
-
-// import 'package:double_back_to_close_app/double_back_to_close_app.dart';
+import 'utils/ParseJson.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class ParseData {
-  int eTime;
-  String date;
-  String time;
-  String day;
-
-  ParseData(this.eTime, this.date, this.time, this.day);
-
-  factory ParseData.fromJson(dynamic parsedJson) {
-    return ParseData(
-      parsedJson['eTime'] as int,
-      parsedJson['date'].toString(),
-      parsedJson['time'].toString(),
-      parsedJson['day'].toString(),
-    );
-  }
-}
-
 class _HomeScreenState extends State<HomeScreen> {
+  List days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
   List leTime, ldate, ltime, lday;
+  List temp=[];
+  List pieData = [];
+  List<PieData> data = [];
   List<ParseData> sData1 = [];
   List<ParseData> sData2 = [];
   List<ParseData> sData3 = [];
   List<ParseData> sData4 = [];
   String s = "";
-  Future<String> _loadParseDataAsset() async {
-    return await rootBundle.loadString('assets/smart.json');
-  }
+  TooltipBehavior _tooltipBehavior;
 
   Future loadParseData(int no) async {
-    String jsonString = await _loadParseDataAsset(); // Deserialization  step 1
+    String jsonString = await rootBundle.loadString('assets/smart.json'); // Deserialization  step 1
     final jsonResponse = json.decode(jsonString); // Deserialization  step 2
     String eTime =
         jsonResponse['Slot $no']['Slot$no Elapsed Time(s): '].values.toString();
-    String date =
-        jsonResponse['Slot $no']['Timestamp(Date): '].values.toString();
     String time =
         jsonResponse['Slot $no']['Timestamp(Time): '].values.toString();
     String day = jsonResponse['Slot $no']['Timestamp(Day): '].values.toString();
     eTime = eTime.substring(1, eTime.length - 1);
-    date = date.substring(1, date.length - 1);
     time = time.substring(1, time.length - 1);
     day = day.substring(1, day.length - 1);
     leTime = eTime.split(", ");
-    ldate = date.split(", ");
     ltime = time.split(", ");
     lday = day.split(", ");
-    for (int i = 0; i < leTime.length; i++) {
+    for (int i = 0; i < ltime.length; i++) {
       s += '{"eTime": ' +
-          leTime[i] +
-          ',"date": "' +
-          ldate[i].toString() +
-          '","time": "' +
+          leTime[i].toString() +
+          ',"time": "' +
           ltime[i].toString() +
           '","day": "' +
           lday[i].toString() +
           '"},';
     }
     s = '[' + s.substring(0, s.length - 1) + ']';
-    print(s);
     final res = json.decode(s); // Deserialization  step 2
     switch (no) {
       case 1:
@@ -83,6 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             for (Map<String, dynamic> i in res) {
               sData1.add(ParseData.fromJson(i)); // Deserialization step 3
+              temp.add(i['day']);
             }
           });
         }
@@ -92,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             for (Map<String, dynamic> i in res) {
               sData2.add(ParseData.fromJson(i)); // Deserialization step 3
+              temp.add(i['day']);
             }
           });
         }
@@ -101,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             for (Map<String, dynamic> i in res) {
               sData3.add(ParseData.fromJson(i)); // Deserialization step 3
+              temp.add(i['day']);
             }
           });
         }
@@ -110,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             for (Map<String, dynamic> i in res) {
               sData4.add(ParseData.fromJson(i)); // Deserialization step 3
+              temp.add(i['day']);
             }
           });
         }
@@ -129,6 +109,14 @@ class _HomeScreenState extends State<HomeScreen> {
         slot4 = event.snapshot.value['S4 time'];
       });
     });
+    for(int i=0;i<5;i++){
+      pieData.add(temp.where((e) => e == days[i]).length);  
+    }
+    int sum = pieData.fold(0, (p, c) => p + c);
+    for(int i=0;i<pieData.length;i++){
+      pieData[i]=(pieData[i]/sum)*100;
+      data.add(PieData(days[i],pieData[i],pieData[i].toString().substring(0,5)+"%"));
+    }
   }
 
   @override
@@ -138,24 +126,13 @@ class _HomeScreenState extends State<HomeScreen> {
     loadParseData(3);
     loadParseData(4);
     printFirebase();
+    _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
     // TODO: implement initState
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<Color> color = <Color>[];
-    color.add(Colors.blue[50]);
-    color.add(Colors.blue[200]);
-    color.add(Colors.blue);
-
-    final List<double> stops = <double>[];
-    stops.add(0.0);
-    stops.add(0.5);
-    stops.add(1.0);
-
-    final LinearGradient gradientColors =
-        LinearGradient(colors: color, stops: stops,begin: Alignment.bottomCenter,end: Alignment.topCenter);
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -198,9 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 subFieldName:
                     slot1 == 0 ? "" : "Total Time: " + slot1.toString(),
               ),
-              onPress: (){
-                  
-              },
             ),
 
             //! My Complaints
@@ -243,26 +217,75 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 20),
+            //Col
             SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                // Chart title
-                title: ChartTitle(text: 'Elapsed Time by Actual Time '),
-                // Enable legend
-                legend:
-                    Legend(isVisible: true),
-                series: <ChartSeries<ParseData, String>>[
-                  AreaSeries<ParseData, String>(
-                      dataSource: sData1, // Deserialized Json data list.
-                      name: "Time",
-                      xValueMapper: (ParseData eTime, _) => eTime.time,
-                      yValueMapper: (ParseData eTime, _) => eTime.eTime,
-                      gradient: gradientColors
-                      // Enable data label
-                      )
-                ]),
+              plotAreaBorderWidth: 0,
+              title: ChartTitle(text: 'Hourly Time Based Analysis'),
+              primaryXAxis: CategoryAxis(title: AxisTitle(text: 'Time(24hr)')),
+              primaryYAxis:
+                  NumericAxis(title: AxisTitle(text: 'Elapsed Time(s)')),
+              series: _getDefaultColumn(),
+              legend: Legend(isVisible: true),
+              tooltipBehavior: _tooltipBehavior,
+            ),
+            SfCircularChart(
+              title: ChartTitle(text:'Daywise Analysis'),
+              legend: Legend(
+                  isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+              series: <DoughnutSeries<PieData, String>>[
+              DoughnutSeries<PieData, String>(
+                  radius: '80%',
+                  explode: true,
+                  explodeOffset: '10%',
+                  dataSource: data,
+                  xValueMapper: (PieData day, _) => day.day,
+                  yValueMapper: (PieData day, _) => day.avg,
+                  dataLabelMapper: (PieData day, _) => day.percent,
+                  dataLabelSettings: DataLabelSettings(isVisible: true))
+            ],
+            tooltipBehavior: TooltipBehavior(enable: true),
+            ),
+            ///Get the column series
           ],
         ),
       ),
     );
+  }
+
+  List<ColumnSeries<ParseData, String>> _getDefaultColumn() {
+    return <ColumnSeries<ParseData, String>>[
+      ColumnSeries<ParseData, String>(
+          width: 0.8,
+          spacing: 0.2,
+          dataSource: sData1,
+          color: const Color.fromRGBO(252, 216, 20, 1),
+          xValueMapper: (ParseData eTime, _) => eTime.time,
+          yValueMapper: (ParseData eTime, _) => eTime.eTime,
+          name: 'Slot 1'),
+      ColumnSeries<ParseData, String>(
+          width: 0.8,
+          spacing: 0.2,
+          dataSource: sData2,
+          color: const Color.fromRGBO(205, 127, 50, 1),
+          xValueMapper: (ParseData eTime, _) => eTime.time,
+          yValueMapper: (ParseData eTime, _) => eTime.eTime,
+          name: 'Slot 2'),
+      ColumnSeries<ParseData, String>(
+          width: 0.8,
+          spacing: 0.2,
+          dataSource: sData3,
+          color: const Color.fromRGBO(22, 216, 20, 1),
+          xValueMapper: (ParseData eTime, _) => eTime.time,
+          yValueMapper: (ParseData eTime, _) => eTime.eTime,
+          name: 'Slot 3'),
+      ColumnSeries<ParseData, String>(
+          width: 0.8,
+          spacing: 0.2,
+          dataSource: sData4,
+          color: const Color.fromRGBO(10, 107, 242, 1),
+          xValueMapper: (ParseData eTime, _) => eTime.time,
+          yValueMapper: (ParseData eTime, _) => eTime.eTime,
+          name: 'Slot 4'),
+    ];
   }
 }
